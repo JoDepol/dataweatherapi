@@ -1,6 +1,7 @@
 {'coord': {'lon': 90.4074, 'lat': 23.7104},
  'weather': [{'id': 721, 'main': 'Haze', 'description': 'haze', 'icon': '50n'}], 
- 'base': 'stations', 'main': {'temp': 304.14, 'feels_like': 310.72, 'temp_min': 304.14, 'temp_max': 304.14, 'pressure': 1001, 'humidity': 70}, 
+ 'base': 'stations', 
+ 'main': {'temp': 304.14, 'feels_like': 310.72, 'temp_min': 304.14, 'temp_max': 304.14, 'pressure': 1001, 'humidity': 70}, 
  'visibility': 4000, 
  'wind': {'speed': 1.54, 'deg': 330}, 
  'clouds': {'all': 40}, 'dt': 1660752192, 
