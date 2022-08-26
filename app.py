@@ -15,7 +15,7 @@ def api_route():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'], 'bh.jpg')
     if request.method == 'POST':
         city = request.form['city']
-        r = requests.get("https://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid={Api_Key}")
+        r = requests.get("https://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid=359dd3fd6b6be34a7511ca2e4dd42f28")
         data = r.json()
         temp = round(data['main']['temp'] - 273.15)
         temp_min = round(data['main']['temp_min']- 273.15)
