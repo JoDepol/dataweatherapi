@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="background-color: aqua; height: 100vh;">
+    <div class="container h-100">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-12 col-xs-12 pt-5" style="background-color:black;">
+                <div class="card-border-0 p-3 shadow-sm text-left">
+                <h1 class="lead text-muted">Weather in {{city}} ({{country}}) :</h1>
+                <h2 class="lead text-muted">Temperature: {{temp}} *C (max: {{temp_max}}*C - min: {{temp_min}}*C)</h2>
+                <h3 class="lead text-muted">Humidity : {{humidity}} %</h3>
+                <h4 class="lead text-muted">Pressure : {{pressure}} hpa</h4>
+                <h5 class="lead text-muted">Sunset is at : {{sunset}} </h5>
+                <h6 class="lead text-muted">Sunrise is at : {{sunrise}} </h6>
+                <p class="lead text-muted">Wind speed : {{wind}} Km/h</p>
+                <h8 class="lead text-muted">Longitude: {{long}} -</h8>
+                <h9 class="lead text-muted">Latitude: {{lat}}</h9>        
+</div>
+    </div>               
+        </div>
+            </div>
+                </div>
+    </body>
+</html>
+{% endblock content %}

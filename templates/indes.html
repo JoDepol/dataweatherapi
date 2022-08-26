@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<html>
+     <body>
+        <nav class="navbar navbar-expand-lg" style="background-color:green;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Weather Api</a>
+              <button class="navbar-toggler" type="button" data-ts-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://api.openweathermap.org">Link</a>
+                  </li>
+              </div>
+            </div>
+        </nav>
+<div style="background-color:black; height: 600px; ">        
+<div class="box">
+  <center><h1 style="size: 10px;"style="color:green">How's the weather?</h1></center>
+    </div>
+    <center><img src="{{user_image}}" height="300px" width="500px" /></center>
+        <form action="/index", method="POST">
+          <div class="mb-3">
+            <center><label class="form-label"style="color:green;">Select a city</label>
+              <input type="text" class="form-control" name="city" aria-label=".form-control-lg" style="width: 200px;">
+          </div>
+<center><button type="submit" class="btn btn-primary">Select</button></center>
+        </form>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+      </body>
+</div>
+</html>
+
+{% endblock content %}
