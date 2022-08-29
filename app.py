@@ -6,13 +6,16 @@ import os
 app = Flask(__name__)
 
 picfolder = os.path.join('static', 'images')
+icon = os.path.join('static', 'images')
 
 app.config['UPLOAD_FOLDER'] = picfolder
+app.config['UPLOAD_FOLDER'] = icon
 
 @app.route('/')
 @app.route('/index', methods=['GET', 'POST'])
 def api_route():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'], 'bh.jpg')
+    icon = os.path.join(app.config['UPLOAD_FOLDER'], 'favicon.ico')
     if request.method == 'POST':
         city = request.form['city']
         r = requests.get("https://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid=359dd3fd6b6be34a7511ca2e4dd42f28")
@@ -30,7 +33,7 @@ def api_route():
         lat = (data['coord']['lat'])
         return render_template("results.html", temp_min=temp_min, temp_max=temp_max, country=country, city=city, temp=temp, humidity=humidity, wind=wind, pressure=pressure, sunset=sunset, sunrise=sunrise, long=long, lat=lat)
 
-    return render_template('indes.html', user_image=pic1)
+    return render_template('indes.html', user_image=pic1, favicon=icon)
 
 if __name__ == '__main__':
     app.run(debug=True, port=8080,)
